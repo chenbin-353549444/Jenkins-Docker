@@ -1,4 +1,5 @@
 FROM jenkins:alpine
+USER root
 
 ARG MAVEN_VERSION=3.5.0
 ARG USER_HOME_DIR="/root"
@@ -24,7 +25,6 @@ ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
 CMD ["mvn"]
 
 # 下载安装Docker CLI
-USER root
 RUN curl -O https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz \
     && tar zxvf docker-latest.tgz \
     && cp docker/docker /usr/local/bin/ \
