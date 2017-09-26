@@ -7,6 +7,7 @@ RUN curl -O https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz \
     && tar zxvf docker-latest.tgz \
     && cp docker/docker /usr/local/bin/ \
     && rm -rf docker docker-latest.tgz \
+    && mkdir /usr/mynode \
     && tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/mynode --strip-components=1 \
     && rm "node-v$NODE_VERSION-linux-x64.tar.xz" \
     && ln -s /usr/mynode/bin/node /usr/local/bin/node \
