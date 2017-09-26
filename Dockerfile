@@ -1,6 +1,4 @@
 FROM jenkins:alpine
-RUN groupadd --gid 1000 node \
-  && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 # 下载安装Docker CLI
 USER root
 ENV NODE_VERSION 8.5.0
