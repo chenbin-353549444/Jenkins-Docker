@@ -2,6 +2,7 @@ FROM jenkins:alpine
 # 下载安装Docker CLI
 USER root
 ENV NODE_VERSION 8.5.0
+ENV PATH $PATH:/usr/mynode/bin
 RUN curl -O https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz \
     && curl -O "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
     && tar zxvf docker-latest.tgz \
