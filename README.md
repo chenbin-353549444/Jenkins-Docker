@@ -5,8 +5,8 @@ Jenkins-Docker是一个使用Dockerfile创建可执行docker命令的Jenkins镜�
 [![Docker Build Statu](https://img.shields.io/docker/build/jrottenberg/ffmpeg.svg)]()
 [![Travis](https://img.shields.io/badge/docker-17.06.1--ce-blue.svg)]()
 
-##详细说明
-####Dockerfile
+## 详细说明
+#### Dockerfile
 ```dockerfile
 FROM jenkins:alpine
 # 下载安装Docker CLI
@@ -20,7 +20,7 @@ ARG DOCKER_GID=999
 USER jenkins:${DOCKER_GID}
 ```
 在这里，我们下载了静态编译的docker可执行文件，并提取命令行安装到系统目录下。然后调整了jenkins用户的组ID，调整为宿主docker组ID，从而使其具有执行docker命令的权限。
-####生成镜像
+#### 生成镜像
 ```console
 $ docker build -t jenkins-docker .
 ```
@@ -32,7 +32,7 @@ $ docker build -t jenkins-docker --build-arg DOCKER_GID=1234 .
 ```console
 $ docker pull superbin/jenkins-docker
 ```
-####运行
+#### 运行
 ```console
 $ docker run --name jenkins \
       -d \
