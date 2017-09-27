@@ -28,7 +28,7 @@ $ docker build -t jenkins-docker .
 ```console
 $ docker build -t jenkins-docker --build-arg DOCKER_GID=1234 .
 ```
-这里由于国内云主机curl步骤时间太长，所以把项目关联到DockerHub上生成镜像，点击[`这里`](https://hub.docker.com/r/superbin/jenkins-docker/)到达DockerHub项目。
+这里由于国内云主机curl步骤时间太长，所以把项目关联到DockerHub上生成镜像: https://hub.docker.com/r/superbin/jenkins-docker/
 ```console
 $ docker pull superbin/jenkins-docker
 ```
