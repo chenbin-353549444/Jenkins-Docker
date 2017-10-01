@@ -16,4 +16,5 @@ docker run --name jenkins \
     -p 8080:8080 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /var/jenkins_home:/var/jenkins_home \
+    -e TZ=Asia/Shanghai \
     superbin/jenkins-docker
